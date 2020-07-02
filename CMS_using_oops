@@ -14,6 +14,9 @@ cuslist = []   #static variable
   def searchcustomer(self):
     for e in Customer.cuslist:
       if(e.id == self.id):
+          self.name=e.name
+          self.age=e.age
+          self.mobno=e.mobno
           return True
     return False
   def   deletecustomer(self):
@@ -25,12 +28,12 @@ cuslist = []   #static variable
   def  modifycustomer(self):
     for e in Customer.cuslist:
       if(e.id == self.id):
-        e.name=self.name
-        e.age=self.age
-        e.mob=self.mob
+        self.name=e.name
+        self.age=e.age
+        self.mobno=e.mobno
         return
 #Pl
-def  showcustomer(self):
+def  showcustomer(cus):
   print("Customer Id:", cus.id ,"Customer Name:", cus.name ,"Customer Age:", cus.age ,"Customer Mobileno:", cus.mobno )
 while(1):
   print("Welcome to Mani's  Customer Management System")
