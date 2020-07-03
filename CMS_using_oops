@@ -28,9 +28,9 @@ cuslist = []   #static variable
   def  modifycustomer(self):
     for e in Customer.cuslist:
       if(e.id == self.id):
-        self.name=e.name
-        self.age=e.age
-        self.mobno=e.mobno
+        e.name = self.name
+        e.age = self.age
+        e.mobno = self.mobno
         return
 #Pl
 def  showcustomer(cus):
